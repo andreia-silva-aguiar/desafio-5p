@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZAPROVPRECO175_SRV" xml:lang="pt" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="solicit_preco" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IdProduto"/>
+                    <PropertyRef Name="DtSolicitacao"/>
+                </Key>
+                <Property Name="IdProduto" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="IdProduto" sap:updatable="false"/>
+                <Property Name="DtSolicitacao" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="DtSolicitacao" sap:updatable="false"/>
+                <Property Name="HoraSolicitacao" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="HoraSolicitacao" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DescProduto" Type="Edm.String" sap:unicode="false" sap:label="DescProduto" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PrecoAtual" Type="Edm.Float" Nullable="false" sap:unicode="false" sap:label="PrecoAtual" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PrecoNovo" Type="Edm.Float" sap:unicode="false" sap:label="PrecoNovo" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Status" sap:creatable="false" sap:filterable="false"/>
+                <Property Name="DtAlteracao" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="DtAlteracao" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CodAntigoProd" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="CodAntigoProd" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aprovador" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Aprovador" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZAPROVPRECO175_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="solicit_precoSet" EntityType="ZAPROVPRECO175_SRV.solicit_preco" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZAPROVPRECO175_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://lnl-s4h.opustech.com.br:5200/sap/opu/odata/sap/ZAPROVPRECO175_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
